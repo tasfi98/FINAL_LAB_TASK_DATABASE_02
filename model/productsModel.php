@@ -41,7 +41,7 @@
 
 	function deleteProduct($id){
 		$con = getConnection();
-		$sql = "delete from products where id={$id}";
+		$sql = "delete from products where pid={$id}";
 		if(mysqli_query($con, $sql)){
 			return true;
 		}else{

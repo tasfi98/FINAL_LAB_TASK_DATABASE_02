@@ -30,7 +30,7 @@
 			<td><?=$data['selling_price']-$data['buying_price']?></td>
 			<td>
 				<a href="edit-product.php?id=<?=$data['pid']?>"> EDIT </a> |
-				<a href="delete-product.php?id=<?=$data['pid']?>"> DELETE</a>
+				<a href="delete.php?id=<?=$data['pid']?>"> DELETE</a>
 			</td>
 		</tr>
 

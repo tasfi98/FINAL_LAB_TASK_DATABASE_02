@@ -11,7 +11,6 @@
 
 					$product = ['pid'=>$pid, 'pname'=> $pname, 'buying_price'=>$buying_price, 'selling_price'=>$selling_price];
 					$status = editProduct($product);
-					print_r($product);
 					if($status){
 						header('location: ../views/product.php');
 					}else{
