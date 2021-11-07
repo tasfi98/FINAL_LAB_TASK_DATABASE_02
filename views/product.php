@@ -1,5 +1,8 @@
 <?php 
 	require_once('header.php');
+	require_once('../model/productsModel.php');
+	$result = getAllproducts();
+	$count = mysqli_num_rows($result);
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +27,10 @@
 	<?php while($data = mysqli_fetch_assoc($result)) { ?>
 		<tr>
 			<td><?=$data['pname']?></td>
-			<td><?=$data['profit']?></td>
+			<td><?=$data['selling_price']-$data['buying_price']?></td>
 			<td>
-				<a href="edit-product.php?id=1"> EDIT </a> |
-				<a href="delete-product.php?id=1"> DELETE</a>
+				<a href="edit-product.php?id=<?=$data['pid']?>"> EDIT </a> |
+				<a href="delete-product.php?id=<?=$data['pid']?>"> DELETE</a>
 			</td>
 		</tr>
 
